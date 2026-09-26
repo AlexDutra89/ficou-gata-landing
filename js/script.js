@@ -1,9 +1,9 @@
 const camisasFotos = [
-  'imagens/camisas/1.webp',
-  'imagens/camisas/2.webp',
-  'imagens/camisas/3.webp',
-  'imagens/camisas/4.webp',
-  'imagens/camisas/5.webp',
+  'imagens/camisas/Camisa Over.webp',
+  'imagens/camisas/Camisa Social Linho.webp',
+  'imagens/camisas/Camisa Social Viscolinho (2).webp',
+  'imagens/camisas/Camisa Social Viscolinho.webp',
+  'imagens/camisas/Mudar Camisa.webp',
 ];
 
 const blusinhasFotos = [
@@ -16,92 +16,116 @@ const blusinhasFotos = [
 ];
 
 const bodysFotos = [
-  'imagens/bodys/1.webp',
-  'imagens/bodys/2.webp',
-  'imagens/bodys/3.webp',
-  'imagens/bodys/4.webp',
-  'imagens/bodys/5.webp',
-  'imagens/bodys/6.webp',
+  'imagens/bodys/Body Poliamida (2).webp',
+  'imagens/bodys/Body Poliamida.webp',
+  'imagens/bodys/Body Renda.webp',
+  'imagens/bodys/Body Suplex.webp',
+  'imagens/bodys/Body Trapeado Tule.webp',
+  'imagens/bodys/Body Tule.webp',
 ];
 
 const calcasFotos = [
-  'imagens/calcas/1.webp',
-  'imagens/calcas/2.webp',
-  'imagens/calcas/3.webp',
-  'imagens/calcas/4.webp',
-  'imagens/calcas/5.webp',
-  'imagens/calcas/6.webp',
+  'imagens/calcas/Calça Alfaiataria.webp',
+  'imagens/calcas/Calça Pantalona (2).webp',
+  'imagens/calcas/Calça Pantalona Alfaiataria.webp',
+  'imagens/calcas/Calça Pantalona.webp',
+  'imagens/calcas/Calça Skiny Courino.webp',
 ];
 
 const conjuntosFotos = [
-  'imagens/conjuntos/1.webp',
-  'imagens/conjuntos/2.webp',
   'imagens/conjuntos/3.webp',
+  'imagens/conjuntos/Conjunto Alfaiataria.webp',
+  'imagens/conjuntos/Conjunto em Linho.webp',
 ];
 
 const tshirtsFotos = [
-  'imagens/tshirts/1.webp',
-  'imagens/tshirts/2.webp',
-  'imagens/tshirts/3.webp',
+  'imagens/tshirts/Camiseta de algodão (2).webp',
+  'imagens/tshirts/Camiseta de algodão (3).webp',
+  'imagens/tshirts/Camiseta de algodão.webp',
 ];
 
 let calcasIndex = 0;
 const calcasFotoEl = document.getElementById('calcasFoto');
 if (calcasFotoEl) {
-  calcasFotoEl.style.backgroundImage = `url(${calcasFotos[0]})`;
+  calcasFotoEl.style.backgroundImage = `url('${calcasFotos[0]}')`;
 }
 function cycleCalcas(el) {
   calcasIndex = (calcasIndex + 1) % calcasFotos.length;
-  el.style.backgroundImage = `url(${calcasFotos[calcasIndex]})`;
+  el.style.backgroundImage = `url('${calcasFotos[calcasIndex]}')`;
 }
 
 let bodysIndex = 0;
 const bodysFotoEl = document.getElementById('bodysFoto');
 if (bodysFotoEl) {
-  bodysFotoEl.style.backgroundImage = `url(${bodysFotos[0]})`;
+  bodysFotoEl.style.backgroundImage = `url('${bodysFotos[0]}')`;
 }
 function cycleBodys(el) {
   bodysIndex = (bodysIndex + 1) % bodysFotos.length;
-  el.style.backgroundImage = `url(${bodysFotos[bodysIndex]})`;
+  el.style.backgroundImage = `url('${bodysFotos[bodysIndex]}')`;
 }
 let blusinhasIndex = 0;
 const blusinhasFotoEl = document.getElementById('blusinhasFoto');
 if (blusinhasFotoEl) {
-  blusinhasFotoEl.style.backgroundImage = `url(${blusinhasFotos[0]})`;
+  blusinhasFotoEl.style.backgroundImage = `url('${blusinhasFotos[0]}')`;
 }
 function cycleBlusinhas(el) {
   blusinhasIndex = (blusinhasIndex + 1) % blusinhasFotos.length;
-  el.style.backgroundImage = `url(${blusinhasFotos[blusinhasIndex]})`;
+  el.style.backgroundImage = `url('${blusinhasFotos[blusinhasIndex]}')`;
 }
 
 let camisasIndex = 0;
 const camisasFotoEl = document.getElementById('camisasFoto');
 if (camisasFotoEl) {
-  camisasFotoEl.style.backgroundImage = `url(${camisasFotos[0]})`;
+  camisasFotoEl.style.backgroundImage = `url('${camisasFotos[0]}')`;
 }
 function cycleCamisas(el) {
   camisasIndex = (camisasIndex + 1) % camisasFotos.length;
-  el.style.backgroundImage = `url(${camisasFotos[camisasIndex]})`;
+  el.style.backgroundImage = `url('${camisasFotos[camisasIndex]}')`;
 }
 
 let conjuntosIndex = 0;
 const conjuntosFotoEl = document.getElementById('conjuntosFoto');
 if (conjuntosFotoEl) {
-  conjuntosFotoEl.style.backgroundImage = `url(${conjuntosFotos[0]})`;
+  conjuntosFotoEl.style.backgroundImage = `url('${conjuntosFotos[0]}')`;
 }
 function cycleConjuntos(el) {
   conjuntosIndex = (conjuntosIndex + 1) % conjuntosFotos.length;
-  el.style.backgroundImage = `url(${conjuntosFotos[conjuntosIndex]})`;
+  el.style.backgroundImage = `url('${conjuntosFotos[conjuntosIndex]}')`;
 }
 
 let tshirtsIndex = 0;
 const tshirtsFotoEl = document.getElementById('tshirtsFoto');
 if (tshirtsFotoEl) {
-  tshirtsFotoEl.style.backgroundImage = `url(${tshirtsFotos[0]})`;
+  tshirtsFotoEl.style.backgroundImage = `url('${tshirtsFotos[0]}')`;
 }
 function cycleTshirts(el) {
   tshirtsIndex = (tshirtsIndex + 1) % tshirtsFotos.length;
-  el.style.backgroundImage = `url(${tshirtsFotos[tshirtsIndex]})`;
+  el.style.backgroundImage = `url('${tshirtsFotos[tshirtsIndex]}')`;
+}
+
+const heroCarrossel = [
+  { foto: camisasFotos[0], card: 'camisasCard' },
+  { foto: blusinhasFotos[0], card: 'blusinhasCard' },
+  { foto: conjuntosFotos[0], card: 'conjuntosCard' },
+  { foto: tshirtsFotos[0], card: 'tshirtsCard' },
+  { foto: bodysFotos[0], card: 'bodysCard' },
+  { foto: calcasFotos[0], card: 'calcasCard' },
+];
+let heroCarrosselIndex = 0;
+const heroCarrosselEl = document.getElementById('heroCarrossel');
+function setHeroCarrosselFoto() {
+  heroCarrosselEl.style.backgroundImage = `url('${heroCarrossel[heroCarrosselIndex].foto}')`;
+}
+if (heroCarrosselEl) {
+  setHeroCarrosselFoto();
+  setInterval(() => {
+    heroCarrosselIndex = (heroCarrosselIndex + 1) % heroCarrossel.length;
+    setHeroCarrosselFoto();
+  }, 3000);
+}
+function heroCarrosselClick() {
+  const cardEl = document.getElementById(heroCarrossel[heroCarrosselIndex].card);
+  if (cardEl) cardEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
 }
 
   const toggle = document.getElementById('menuToggle');

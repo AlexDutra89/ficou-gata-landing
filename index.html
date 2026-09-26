@@ -71,7 +71,7 @@
     </div>
     <div class="hero-visual">
       <div class="hero-photo-frame">
-        <img src="imagens/logo/logo.webp" alt="Ficou Gata">
+        <div class="hero-carrossel-foto" id="heroCarrossel" onclick="heroCarrosselClick()" role="button" tabindex="0" aria-label="Ver peça na vitrine" style="cursor:pointer;background-size:cover;background-position:center;"></div>
       </div>
       <div class="hero-tag-float etiqueta">peça única</div>
     </div>
@@ -115,34 +115,34 @@
     </div>
 
     <div class="carrossel">
-      <div class="cat-card">
+      <div class="cat-card" id="camisasCard">
         <div class="cat-photo" id="camisasFoto" onclick="cycleCamisas(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">Camisas</p>
         <button type="button" class="cat-add" onclick="addToCart('Camisas')">+ Adicionar à sacola</button>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" id="blusinhasCard">
         <div class="cat-photo" id="blusinhasFoto" onclick="cycleBlusinhas(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">Blusinhas</p>
         <p class="cat-produto">Regata em Viscose</p>
         <p class="cat-tamanhos">Tamanhos M ao GG — consulte disponibilidade no WhatsApp</p>
         <button type="button" class="cat-add" onclick="addToCart('Blusinhas')">+ Adicionar à sacola</button>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" id="conjuntosCard">
         <div class="cat-photo" id="conjuntosFoto" onclick="cycleConjuntos(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">Conjuntos</p>
         <button type="button" class="cat-add" onclick="addToCart('Conjuntos')">+ Adicionar à sacola</button>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" id="tshirtsCard">
         <div class="cat-photo" id="tshirtsFoto" onclick="cycleTshirts(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">T-shirts</p>
         <button type="button" class="cat-add" onclick="addToCart('T-shirts')">+ Adicionar à sacola</button>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" id="bodysCard">
         <div class="cat-photo" id="bodysFoto" onclick="cycleBodys(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">Bodys</p>
         <button type="button" class="cat-add" onclick="addToCart('Bodys')">+ Adicionar à sacola</button>
       </div>
-      <div class="cat-card">
+      <div class="cat-card" id="calcasCard">
         <div class="cat-photo" id="calcasFoto" onclick="cycleCalcas(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">Calças</p>
         <button type="button" class="cat-add" onclick="addToCart('Calças')">+ Adicionar à sacola</button>

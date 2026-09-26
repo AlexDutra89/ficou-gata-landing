@@ -244,6 +244,13 @@
     border-radius:50%;
     box-shadow:0 0 0 6px rgba(250,246,242,0.85);
   }
+  .hero-carrossel-foto{
+    width:150px;height:150px;
+    border-radius:50%;
+    box-shadow:0 0 0 6px rgba(250,246,242,0.85);
+    background-color:var(--blush);
+    transition:opacity .3s ease;
+  }
   .hero-tag-float{
     position:absolute;
     bottom:-18px;left:-18px;
