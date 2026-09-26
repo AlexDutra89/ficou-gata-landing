@@ -364,6 +364,19 @@
     font-size:1.15rem;
     color:var(--vinho-escuro);
   }
+  .cat-produto{
+    margin-top:2px;
+    font-family:'Jost',sans-serif;
+    font-size:0.85rem;
+    color:var(--tinta);
+  }
+  .cat-tamanhos{
+    margin-top:4px;
+    font-family:'Jost',sans-serif;
+    font-size:0.78rem;
+    color:var(--rosa);
+    line-height:1.4;
+  }
   .cat-badge{
     position:absolute;
     top:14px;right:14px;
@@ -838,6 +851,8 @@
       <div class="cat-card">
         <div class="cat-photo" id="blusinhasFoto" onclick="cycleBlusinhas(this)" style="cursor:pointer;background-size:cover;background-position:center;"></div>
         <p class="cat-name">Blusinhas</p>
+        <p class="cat-produto">Regata em Viscose</p>
+        <p class="cat-tamanhos">Tamanhos M ao GG — consulte disponibilidade no WhatsApp</p>
         <button type="button" class="cat-add" onclick="addToCart('Blusinhas')">+ Adicionar à sacola</button>
       </div>
       <div class="cat-card">
@@ -1055,7 +1070,7 @@ const camisasFotos = [
 ];
 
 const blusinhasFotos = [
-  'imagens/blusinhas/1.webp',
+  'imagens/blusinhas/Regata_em_Viscose.webp',
   'imagens/blusinhas/2.webp',
   'imagens/blusinhas/3.webp',
   'imagens/blusinhas/4.webp',
