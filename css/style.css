@@ -239,14 +239,9 @@
     border:1px solid rgba(250,246,242,0.55);
     border-radius:4px;
   }
-  .hero-photo-frame img{
-    width:150px;height:150px;
-    border-radius:50%;
-    box-shadow:0 0 0 6px rgba(250,246,242,0.85);
-  }
   .hero-carrossel-foto{
-    width:150px;height:150px;
-    border-radius:50%;
+    width:90%;height:90%;
+    border-radius:12px;
     box-shadow:0 0 0 6px rgba(250,246,242,0.85);
     background-color:var(--blush);
     transition:opacity .3s ease;
@@ -310,6 +305,11 @@
   }
   .section-head h2{ font-size:clamp(1.9rem,3.4vw,2.5rem); }
   .section-head p{ color:#5a4548; max-width:420px; }
+  .section-head p.vitrine-tamanhos{
+    font-weight:600;
+    color:var(--rosa);
+    margin-top:6px;
+  }
 
   .carrossel{
     display:flex;
