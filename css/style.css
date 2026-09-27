@@ -211,7 +211,7 @@
     max-width:460px;
     margin-bottom:34px;
   }
-  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; }
+  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
 
   .hero-visual{
     position:relative;
@@ -333,10 +333,15 @@
     height:300px;
     border-radius:4px;
     background:linear-gradient(150deg, var(--blush), var(--rosa) 120%);
+    background-size:cover;
+    background-position:center;
+    cursor:pointer;
     position:relative;
     overflow:hidden;
     box-shadow:0 18px 32px -18px rgba(110,42,56,0.35);
+    transition: background-size .4s ease;
   }
+  .cat-photo:hover{ background-size: 115%; }
   .cat-name{
     margin-top:16px;
     font-family:'Fraunces',serif;
