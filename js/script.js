@@ -3,6 +3,7 @@ const camisasFotos = [
   { url: 'imagens/camisas/Camisa Social Linho.webp', nome: 'Camisa Social Linho' },
   { url: 'imagens/camisas/Camisa Social Viscolinho Azul.webp', nome: 'Camisa Social Viscolinho Azul' },
   { url: 'imagens/camisas/Camisa Social Viscolinho Rosa.webp', nome: 'Camisa Social Viscolinho Rosa' },
+  { url: 'imagens/camisas/Camisa Social Viscolinho.webp', nome: 'Camisa Social Viscolinho' },
 ];
 
 const blusinhasFotos = [
@@ -17,6 +18,8 @@ const blusinhasFotos = [
 const bodysFotos = [
   { url: 'imagens/bodys/Body Poliamida Amarelo.webp', nome: 'Body Poliamida Amarelo' },
   { url: 'imagens/bodys/Body Poliamida Marrom.webp', nome: 'Body Poliamida Marrom' },
+  { url: 'imagens/bodys/Body Poliamida Preto.webp', nome: 'Body Poliamida Preto' },
+  { url: 'imagens/bodys/Body Renda.webp', nome: 'Body Renda' },
   { url: 'imagens/bodys/Body Suplex.webp', nome: 'Body Suplex' },
   { url: 'imagens/bodys/Body Trapeado Tule.webp', nome: 'Body Trapeado Tule' },
   { url: 'imagens/bodys/Body Tule.webp', nome: 'Body Tule' },
@@ -36,9 +39,9 @@ const conjuntosFotos = [
 ];
 
 const tshirtsFotos = [
-  { url: 'imagens/tshirts/Camiseta de algodão (2).webp', nome: 'Camiseta de Algodão' },
-  { url: 'imagens/tshirts/Camiseta de algodão (3).webp', nome: 'Camiseta de Algodão' },
-  { url: 'imagens/tshirts/Camiseta de algodão.webp', nome: 'Camiseta de Algodão' },
+  { url: 'imagens/tshirts/Camiseta de Algodão (2).webp', nome: 'Camiseta de Algodão' },
+  { url: 'imagens/tshirts/Camiseta de Algodão (3).webp', nome: 'Camiseta de Algodão' },
+  { url: 'imagens/tshirts/Camiseta de Algodão.webp', nome: 'Camiseta de Algodão' },
 ];
 
 let calcasIndex = 0;
