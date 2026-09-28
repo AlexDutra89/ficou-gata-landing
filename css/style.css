@@ -81,11 +81,11 @@
     white-space:nowrap;
   }
   .btn-primary{
-    background:var(--vinho);
+    background:var(--rosa);
     color:var(--marfim);
-    border-color:var(--vinho);
+    border-color:var(--rosa);
   }
-  .btn-primary:hover{ background:var(--vinho-escuro); border-color:var(--vinho-escuro); }
+  .btn-primary:hover{ background:var(--vinho); border-color:var(--vinho); }
 
   .btn-ghost{
     background:transparent;
@@ -428,7 +428,7 @@
     cursor:pointer;
     transition:background .2s,color .2s;
   }
-  .cat-add:hover{ background:var(--vinho); color:var(--marfim); border-color:var(--vinho); }
+  .cat-add:hover{ background:var(--rosa); color:var(--marfim); border-color:var(--rosa); }
 
   /* ---------- Sacola / Carrinho ---------- */
   .cart-toggle{
@@ -443,7 +443,7 @@
     align-items:center;
     justify-content:center;
     box-shadow:0 14px 30px -10px rgba(110,42,56,0.45);
-    border:2px solid var(--vinho);
+    border:2px solid var(--rosa);
     cursor:pointer;
   }
   .cart-toggle:hover{ background:var(--blush); }
@@ -747,7 +747,7 @@
     position:fixed;
     bottom:26px;right:26px;
     z-index:250;
-    background:var(--vinho);
+    background:var(--rosa);
     color:var(--marfim);
     width:58px;height:58px;
     border-radius:50%;
@@ -757,7 +757,7 @@
     box-shadow:0 14px 30px -10px rgba(110,42,56,0.55);
     border:2px solid var(--marfim);
   }
-  .whats-float:hover{ background:var(--vinho-escuro); }
+  .whats-float:hover{ background:var(--vinho); }
   .whats-float svg{ width:26px;height:26px; }
 
   /* ---------- Responsivo ---------- */

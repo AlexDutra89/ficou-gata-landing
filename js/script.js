@@ -252,6 +252,9 @@ function checkoutWhatsApp(){
   const mensagem = `Olá, vim do site e gostaria de mais informações sobre essa(s) peça(s):\n${linhas}`;
   const url = `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(mensagem)}`;
   window.open(url, '_blank');
+  cart = [];
+  renderCart();
+  toggleCart(false);
 }
 
 /* ================= FORMULÁRIO DE CONTATO ================= */
