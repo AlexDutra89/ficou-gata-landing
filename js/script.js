@@ -54,7 +54,6 @@ function renderCategoria(id, fotos, categoriaNome){
         <div class="cat-photo" style="background-image:url('${encodeURI(foto.url)}')">
           <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
         </div>
-        <p class="cat-name">${categoriaNome}</p>
         <p class="cat-produto">${foto.nome}</p>
         <button type="button" class="cat-add" onclick="addToCart('${categoriaNome}', '${nomeEscapado}')">+ Adicionar à sacola</button>
       </div>
@@ -62,12 +61,31 @@ function renderCategoria(id, fotos, categoriaNome){
   }).join('');
 }
 
+function ajustarCarrossel(id){
+  const el = document.getElementById(id + 'Carrossel');
+  const wrap = el ? el.closest('.carrossel-wrap') : null;
+  if (!el || !wrap) return;
+  const setaEsq = wrap.querySelector('.carrossel-seta-esq');
+  const setaDir = wrap.querySelector('.carrossel-seta-dir');
+  const temOverflow = el.scrollWidth > el.clientWidth + 4;
+  if (setaEsq) setaEsq.hidden = !temOverflow;
+  if (setaDir) setaDir.hidden = !temOverflow;
+  el.classList.toggle('carrossel-centralizado', !temOverflow);
+}
+
+const CATEGORIAS_IDS = ['camisas', 'blusinhas', 'conjuntos', 'tshirts', 'bodys', 'calcas'];
+
 renderCategoria('camisas', camisasFotos, 'Camisas');
 renderCategoria('blusinhas', blusinhasFotos, 'Blusinhas');
 renderCategoria('conjuntos', conjuntosFotos, 'Conjuntos');
 renderCategoria('tshirts', tshirtsFotos, 'T-shirts');
 renderCategoria('bodys', bodysFotos, 'Bodys');
 renderCategoria('calcas', calcasFotos, 'Calças');
+
+CATEGORIAS_IDS.forEach(ajustarCarrossel);
+window.addEventListener('resize', function(){
+  CATEGORIAS_IDS.forEach(ajustarCarrossel);
+});
 
 function scrollCategoria(id, direcao){
   const el = document.getElementById(id + 'Carrossel');
