@@ -237,11 +237,12 @@
     position:absolute;
     inset:16px;
     border:1px solid rgba(250,246,242,0.55);
-    border-radius:4px;
+    border-radius:20px;
+    
   }
   .hero-carrossel-foto{
     width:90%;height:90%;
-    border-radius:12px;
+    border-radius:15px;
     box-shadow:0 0 0 6px rgba(250,246,242,0.85);
     background-color:var(--blush);
     transition:opacity .3s ease;
@@ -260,7 +261,7 @@
 
   /* ---------- Marquee ---------- */
   .marquee-wrap{
-    background:var(--vinho);
+    background:var(--rosa);
     color:var(--marfim);
     overflow:hidden;
     padding:16px 0;
@@ -283,7 +284,7 @@
   .marquee-track span::after{
     content:"✦";
     font-style:normal;
-    color:var(--rosa);
+    color:var(--vinho-escuro);
   }
   @keyframes scroll-left{
     from{ transform:translateX(0); }
