@@ -38,12 +38,12 @@
     </div>
 
     <nav class="main-nav" id="mainNav">
-      <a href="#vitrine">Camisas</a>
-      <a href="#vitrine">Blusinhas</a>
-      <a href="#vitrine">Conjuntos</a>
-      <a href="#vitrine">T-shirts</a>
-      <a href="#vitrine">Bodys</a>
-      <a href="#vitrine">Calças</a>
+      <a href="#camisas">Camisas</a>
+      <a href="#blusinhas">Blusinhas</a>
+      <a href="#conjuntos">Conjuntos</a>
+      <a href="#tshirts">T-shirts</a>
+      <a href="#bodys">Bodys</a>
+      <a href="#calcas">Calças</a>
     </nav>
 
     <div class="header-actions">
@@ -112,60 +112,71 @@
         <p class="vitrine-tamanhos">Tamanhos M ao GG — consulte disponibilidade no WhatsApp</p>
       </div>
     </div>
+  </div>
 
+  <div class="categoria-secao" id="camisas">
+    <div class="container">
+      <h3 class="categoria-titulo">Camisas</h3>
+    </div>
     <div class="carrossel-wrap">
-      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollVitrine(-1)" aria-label="Ver anteriores">‹</button>
-      <div class="carrossel" id="vitrineCarrossel">
-      <div class="cat-card" id="camisasCard">
-        <div class="cat-photo" id="camisasFoto" onclick="cycleCamisas(this)">
-          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
-        </div>
-        <p class="cat-name">Camisas</p>
-        <p class="cat-produto" id="camisasProduto"></p>
-        <button type="button" class="cat-add" onclick="addToCart('Camisas')">+ Adicionar à sacola</button>
-      </div>
-      <div class="cat-card" id="blusinhasCard">
-        <div class="cat-photo" id="blusinhasFoto" onclick="cycleBlusinhas(this)">
-          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
-        </div>
-        <p class="cat-name">Blusinhas</p>
-        <p class="cat-produto">Regata em Viscose</p>
-        <button type="button" class="cat-add" onclick="addToCart('Blusinhas')">+ Adicionar à sacola</button>
-      </div>
-      <div class="cat-card" id="conjuntosCard">
-        <div class="cat-photo" id="conjuntosFoto" onclick="cycleConjuntos(this)">
-          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
-        </div>
-        <p class="cat-name">Conjuntos</p>
-        <p class="cat-produto" id="conjuntosProduto"></p>
-        <button type="button" class="cat-add" onclick="addToCart('Conjuntos')">+ Adicionar à sacola</button>
-      </div>
-      <div class="cat-card" id="tshirtsCard">
-        <div class="cat-photo" id="tshirtsFoto" onclick="cycleTshirts(this)">
-          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
-        </div>
-        <p class="cat-name">T-shirts</p>
-        <p class="cat-produto" id="tshirtsProduto"></p>
-        <button type="button" class="cat-add" onclick="addToCart('T-shirts')">+ Adicionar à sacola</button>
-      </div>
-      <div class="cat-card" id="bodysCard">
-        <div class="cat-photo" id="bodysFoto" onclick="cycleBodys(this)">
-          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
-        </div>
-        <p class="cat-name">Bodys</p>
-        <p class="cat-produto" id="bodysProduto"></p>
-        <button type="button" class="cat-add" onclick="addToCart('Bodys')">+ Adicionar à sacola</button>
-      </div>
-      <div class="cat-card" id="calcasCard">
-        <div class="cat-photo" id="calcasFoto" onclick="cycleCalcas(this)">
-          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
-        </div>
-        <p class="cat-name">Calças</p>
-        <p class="cat-produto" id="calcasProduto"></p>
-        <button type="button" class="cat-add" onclick="addToCart('Calças')">+ Adicionar à sacola</button>
-      </div>
-      </div>
-      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollVitrine(1)" aria-label="Ver próximas">›</button>
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollCategoria('camisas', -1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="camisasCarrossel"></div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollCategoria('camisas', 1)" aria-label="Ver próximas">›</button>
+    </div>
+  </div>
+
+  <div class="categoria-secao" id="blusinhas">
+    <div class="container">
+      <h3 class="categoria-titulo">Blusinhas</h3>
+    </div>
+    <div class="carrossel-wrap">
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollCategoria('blusinhas', -1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="blusinhasCarrossel"></div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollCategoria('blusinhas', 1)" aria-label="Ver próximas">›</button>
+    </div>
+  </div>
+
+  <div class="categoria-secao" id="conjuntos">
+    <div class="container">
+      <h3 class="categoria-titulo">Conjuntos</h3>
+    </div>
+    <div class="carrossel-wrap">
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollCategoria('conjuntos', -1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="conjuntosCarrossel"></div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollCategoria('conjuntos', 1)" aria-label="Ver próximas">›</button>
+    </div>
+  </div>
+
+  <div class="categoria-secao" id="tshirts">
+    <div class="container">
+      <h3 class="categoria-titulo">T-shirts</h3>
+    </div>
+    <div class="carrossel-wrap">
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollCategoria('tshirts', -1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="tshirtsCarrossel"></div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollCategoria('tshirts', 1)" aria-label="Ver próximas">›</button>
+    </div>
+  </div>
+
+  <div class="categoria-secao" id="bodys">
+    <div class="container">
+      <h3 class="categoria-titulo">Bodys</h3>
+    </div>
+    <div class="carrossel-wrap">
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollCategoria('bodys', -1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="bodysCarrossel"></div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollCategoria('bodys', 1)" aria-label="Ver próximas">›</button>
+    </div>
+  </div>
+
+  <div class="categoria-secao" id="calcas">
+    <div class="container">
+      <h3 class="categoria-titulo">Calças</h3>
+    </div>
+    <div class="carrossel-wrap">
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollCategoria('calcas', -1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="calcasCarrossel"></div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollCategoria('calcas', 1)" aria-label="Ver próximas">›</button>
     </div>
   </div>
 </section>

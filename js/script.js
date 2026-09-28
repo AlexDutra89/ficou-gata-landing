@@ -44,97 +44,44 @@ const tshirtsFotos = [
   { url: 'imagens/tshirts/Camiseta de Algodão.webp', nome: 'Camiseta de Algodão' },
 ];
 
-let calcasIndex = 0;
-const calcasFotoEl = document.getElementById('calcasFoto');
-const calcasProdutoEl = document.getElementById('calcasProduto');
-if (calcasFotoEl) {
-  calcasFotoEl.style.backgroundImage = `url('${encodeURI(calcasFotos[0].url)}')`;
-}
-if (calcasProdutoEl) {
-  calcasProdutoEl.textContent = calcasFotos[0].nome;
-}
-function cycleCalcas(el) {
-  calcasIndex = (calcasIndex + 1) % calcasFotos.length;
-  el.style.backgroundImage = `url('${encodeURI(calcasFotos[calcasIndex].url)}')`;
-  if (calcasProdutoEl) calcasProdutoEl.textContent = calcasFotos[calcasIndex].nome;
-}
-
-let bodysIndex = 0;
-const bodysFotoEl = document.getElementById('bodysFoto');
-const bodysProdutoEl = document.getElementById('bodysProduto');
-if (bodysFotoEl) {
-  bodysFotoEl.style.backgroundImage = `url('${encodeURI(bodysFotos[0].url)}')`;
-}
-if (bodysProdutoEl) {
-  bodysProdutoEl.textContent = bodysFotos[0].nome;
-}
-function cycleBodys(el) {
-  bodysIndex = (bodysIndex + 1) % bodysFotos.length;
-  el.style.backgroundImage = `url('${encodeURI(bodysFotos[bodysIndex].url)}')`;
-  if (bodysProdutoEl) bodysProdutoEl.textContent = bodysFotos[bodysIndex].nome;
-}
-let blusinhasIndex = 0;
-const blusinhasFotoEl = document.getElementById('blusinhasFoto');
-if (blusinhasFotoEl) {
-  blusinhasFotoEl.style.backgroundImage = `url('${encodeURI(blusinhasFotos[0].url)}')`;
-}
-function cycleBlusinhas(el) {
-  blusinhasIndex = (blusinhasIndex + 1) % blusinhasFotos.length;
-  el.style.backgroundImage = `url('${encodeURI(blusinhasFotos[blusinhasIndex].url)}')`;
+function renderCategoria(id, fotos, categoriaNome){
+  const el = document.getElementById(id + 'Carrossel');
+  if (!el) return;
+  el.innerHTML = fotos.map(function(foto){
+    const nomeEscapado = foto.nome.replace(/'/g, "\\'");
+    return `
+      <div class="cat-card">
+        <div class="cat-photo" style="background-image:url('${encodeURI(foto.url)}')">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
+        <p class="cat-name">${categoriaNome}</p>
+        <p class="cat-produto">${foto.nome}</p>
+        <button type="button" class="cat-add" onclick="addToCart('${categoriaNome}', '${nomeEscapado}')">+ Adicionar à sacola</button>
+      </div>
+    `;
+  }).join('');
 }
 
-let camisasIndex = 0;
-const camisasFotoEl = document.getElementById('camisasFoto');
-const camisasProdutoEl = document.getElementById('camisasProduto');
-if (camisasFotoEl) {
-  camisasFotoEl.style.backgroundImage = `url('${encodeURI(camisasFotos[0].url)}')`;
-}
-if (camisasProdutoEl) {
-  camisasProdutoEl.textContent = camisasFotos[0].nome;
-}
-function cycleCamisas(el) {
-  camisasIndex = (camisasIndex + 1) % camisasFotos.length;
-  el.style.backgroundImage = `url('${encodeURI(camisasFotos[camisasIndex].url)}')`;
-  if (camisasProdutoEl) camisasProdutoEl.textContent = camisasFotos[camisasIndex].nome;
-}
+renderCategoria('camisas', camisasFotos, 'Camisas');
+renderCategoria('blusinhas', blusinhasFotos, 'Blusinhas');
+renderCategoria('conjuntos', conjuntosFotos, 'Conjuntos');
+renderCategoria('tshirts', tshirtsFotos, 'T-shirts');
+renderCategoria('bodys', bodysFotos, 'Bodys');
+renderCategoria('calcas', calcasFotos, 'Calças');
 
-let conjuntosIndex = 0;
-const conjuntosFotoEl = document.getElementById('conjuntosFoto');
-const conjuntosProdutoEl = document.getElementById('conjuntosProduto');
-if (conjuntosFotoEl) {
-  conjuntosFotoEl.style.backgroundImage = `url('${encodeURI(conjuntosFotos[0].url)}')`;
-}
-if (conjuntosProdutoEl) {
-  conjuntosProdutoEl.textContent = conjuntosFotos[0].nome;
-}
-function cycleConjuntos(el) {
-  conjuntosIndex = (conjuntosIndex + 1) % conjuntosFotos.length;
-  el.style.backgroundImage = `url('${encodeURI(conjuntosFotos[conjuntosIndex].url)}')`;
-  if (conjuntosProdutoEl) conjuntosProdutoEl.textContent = conjuntosFotos[conjuntosIndex].nome;
-}
-
-let tshirtsIndex = 0;
-const tshirtsFotoEl = document.getElementById('tshirtsFoto');
-const tshirtsProdutoEl = document.getElementById('tshirtsProduto');
-if (tshirtsFotoEl) {
-  tshirtsFotoEl.style.backgroundImage = `url('${encodeURI(tshirtsFotos[0].url)}')`;
-}
-if (tshirtsProdutoEl) {
-  tshirtsProdutoEl.textContent = tshirtsFotos[0].nome;
-}
-function cycleTshirts(el) {
-  tshirtsIndex = (tshirtsIndex + 1) % tshirtsFotos.length;
-  el.style.backgroundImage = `url('${encodeURI(tshirtsFotos[tshirtsIndex].url)}')`;
-  if (tshirtsProdutoEl) tshirtsProdutoEl.textContent = tshirtsFotos[tshirtsIndex].nome;
+function scrollCategoria(id, direcao){
+  const el = document.getElementById(id + 'Carrossel');
+  if (!el) return;
+  el.scrollBy({ left: direcao * 280, behavior: 'smooth' });
 }
 
 const heroCarrossel = [
-  { foto: camisasFotos[0].url, card: 'camisasCard' },
-  { foto: blusinhasFotos[0].url, card: 'blusinhasCard' },
-  { foto: conjuntosFotos[0].url, card: 'conjuntosCard' },
-  { foto: tshirtsFotos[0].url, card: 'tshirtsCard' },
-  { foto: bodysFotos[0].url, card: 'bodysCard' },
-  { foto: calcasFotos[0].url, card: 'calcasCard' },
+  { foto: camisasFotos[0].url, card: 'camisas' },
+  { foto: blusinhasFotos[0].url, card: 'blusinhas' },
+  { foto: conjuntosFotos[0].url, card: 'conjuntos' },
+  { foto: tshirtsFotos[0].url, card: 'tshirts' },
+  { foto: bodysFotos[0].url, card: 'bodys' },
+  { foto: calcasFotos[0].url, card: 'calcas' },
 ];
 let heroCarrosselIndex = 0;
 const heroCarrosselEl = document.getElementById('heroCarrossel');
@@ -151,12 +98,6 @@ if (heroCarrosselEl) {
 function heroCarrosselClick() {
   const cardEl = document.getElementById(heroCarrossel[heroCarrosselIndex].card);
   if (cardEl) cardEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-}
-
-function scrollVitrine(direcao){
-  const el = document.getElementById('vitrineCarrossel');
-  if (!el) return;
-  el.scrollBy({ left: direcao * 280, behavior: 'smooth' });
 }
 
 function abrirVisualizacao(botao){
@@ -189,18 +130,7 @@ function fecharVisualizacao(){
 const WHATS_NUMBER = '5511953387908';
 let cart = [];
 
-function nomeProdutoAtual(categoria){
-  if (categoria === 'Camisas') return camisasFotos[camisasIndex].nome;
-  if (categoria === 'Blusinhas') return blusinhasFotos[blusinhasIndex].nome;
-  if (categoria === 'Conjuntos') return conjuntosFotos[conjuntosIndex].nome;
-  if (categoria === 'T-shirts') return tshirtsFotos[tshirtsIndex].nome;
-  if (categoria === 'Bodys') return bodysFotos[bodysIndex].nome;
-  if (categoria === 'Calças') return calcasFotos[calcasIndex].nome;
-  return categoria;
-}
-
-function addToCart(categoria){
-  const nomeProduto = nomeProdutoAtual(categoria);
+function addToCart(categoria, nomeProduto){
   const existing = cart.find(item => item.categoria === categoria && item.nomeProduto === nomeProduto);
   if (existing) {
     existing.qty += 1;

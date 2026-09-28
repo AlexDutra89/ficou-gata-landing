@@ -288,6 +288,13 @@
 
   /* ---------- Vitrine / Categorias ---------- */
   .vitrine{ padding:100px 0 90px; }
+  .categoria-secao{ margin-bottom:64px; }
+  .categoria-titulo{
+    font-family:'Fraunces',serif;
+    font-size:1.5rem;
+    color:var(--vinho-escuro);
+    margin-bottom:18px;
+  }
   .section-head{
     display:flex;
     justify-content:space-between;
