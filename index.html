@@ -115,37 +115,49 @@
 
     <div class="carrossel">
       <div class="cat-card" id="camisasCard">
-        <div class="cat-photo" id="camisasFoto" onclick="cycleCamisas(this)"></div>
+        <div class="cat-photo" id="camisasFoto" onclick="cycleCamisas(this)">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
         <p class="cat-name">Camisas</p>
         <p class="cat-produto" id="camisasProduto"></p>
         <button type="button" class="cat-add" onclick="addToCart('Camisas')">+ Adicionar à sacola</button>
       </div>
       <div class="cat-card" id="blusinhasCard">
-        <div class="cat-photo" id="blusinhasFoto" onclick="cycleBlusinhas(this)"></div>
+        <div class="cat-photo" id="blusinhasFoto" onclick="cycleBlusinhas(this)">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
         <p class="cat-name">Blusinhas</p>
         <p class="cat-produto">Regata em Viscose</p>
         <button type="button" class="cat-add" onclick="addToCart('Blusinhas')">+ Adicionar à sacola</button>
       </div>
       <div class="cat-card" id="conjuntosCard">
-        <div class="cat-photo" id="conjuntosFoto" onclick="cycleConjuntos(this)"></div>
+        <div class="cat-photo" id="conjuntosFoto" onclick="cycleConjuntos(this)">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
         <p class="cat-name">Conjuntos</p>
         <p class="cat-produto" id="conjuntosProduto"></p>
         <button type="button" class="cat-add" onclick="addToCart('Conjuntos')">+ Adicionar à sacola</button>
       </div>
       <div class="cat-card" id="tshirtsCard">
-        <div class="cat-photo" id="tshirtsFoto" onclick="cycleTshirts(this)"></div>
+        <div class="cat-photo" id="tshirtsFoto" onclick="cycleTshirts(this)">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
         <p class="cat-name">T-shirts</p>
         <p class="cat-produto" id="tshirtsProduto"></p>
         <button type="button" class="cat-add" onclick="addToCart('T-shirts')">+ Adicionar à sacola</button>
       </div>
       <div class="cat-card" id="bodysCard">
-        <div class="cat-photo" id="bodysFoto" onclick="cycleBodys(this)"></div>
+        <div class="cat-photo" id="bodysFoto" onclick="cycleBodys(this)">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
         <p class="cat-name">Bodys</p>
         <p class="cat-produto" id="bodysProduto"></p>
         <button type="button" class="cat-add" onclick="addToCart('Bodys')">+ Adicionar à sacola</button>
       </div>
       <div class="cat-card" id="calcasCard">
-        <div class="cat-photo" id="calcasFoto" onclick="cycleCalcas(this)"></div>
+        <div class="cat-photo" id="calcasFoto" onclick="cycleCalcas(this)">
+          <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
+        </div>
         <p class="cat-name">Calças</p>
         <p class="cat-produto" id="calcasProduto"></p>
         <button type="button" class="cat-add" onclick="addToCart('Calças')">+ Adicionar à sacola</button>
@@ -341,6 +353,11 @@
 </a>
 
 <script src="js/script.js"></script>
+
+<div id="visualizadorOverlay" class="visualizador-overlay" hidden onclick="fecharVisualizacao()">
+  <button type="button" class="visualizador-voltar" onclick="event.stopPropagation(); fecharVisualizacao()">Voltar</button>
+  <img id="visualizadorImg" class="visualizador-img" src="" alt="">
+</div>
 
 </body>
 </html>

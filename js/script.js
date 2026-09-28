@@ -7,7 +7,7 @@ const camisasFotos = [
 ];
 
 const blusinhasFotos = [
-  { url: 'imagens/blusinhas/Regata_em_Viscose.webp', nome: 'Regata em Viscose' },
+  { url: 'imagens/blusinhas/Regata em Viscose.webp', nome: 'Regata em Viscose' },
   { url: 'imagens/blusinhas/2.webp', nome: 'Regata em Viscose' },
   { url: 'imagens/blusinhas/3.webp', nome: 'Regata em Viscose' },
   { url: 'imagens/blusinhas/4.webp', nome: 'Regata em Viscose' },
@@ -151,6 +151,20 @@ if (heroCarrosselEl) {
 function heroCarrosselClick() {
   const cardEl = document.getElementById(heroCarrossel[heroCarrosselIndex].card);
   if (cardEl) cardEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+}
+
+function abrirVisualizacao(botao){
+  const foto = botao.closest('.cat-photo');
+  const bg = foto.style.backgroundImage;
+  const url = bg.slice(bg.indexOf('(') + 1, bg.lastIndexOf(')')).replace(/["']/g, '');
+  const overlay = document.getElementById('visualizadorOverlay');
+  const img = document.getElementById('visualizadorImg');
+  img.src = url;
+  overlay.hidden = false;
+}
+
+function fecharVisualizacao(){
+  document.getElementById('visualizadorOverlay').hidden = true;
 }
 
   const toggle = document.getElementById('menuToggle');
