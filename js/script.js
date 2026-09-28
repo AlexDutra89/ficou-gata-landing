@@ -153,6 +153,12 @@ function heroCarrosselClick() {
   if (cardEl) cardEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
 }
 
+function scrollVitrine(direcao){
+  const el = document.getElementById('vitrineCarrossel');
+  if (!el) return;
+  el.scrollBy({ left: direcao * 280, behavior: 'smooth' });
+}
+
 function abrirVisualizacao(botao){
   const foto = botao.closest('.cat-photo');
   const bg = foto.style.backgroundImage;

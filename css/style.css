@@ -308,14 +308,40 @@
     display:flex;
     gap:22px;
     overflow-x:auto;
-    padding:14px 4px 26px;
+    padding:14px 4px;
     scroll-snap-type:x mandatory;
-    scrollbar-width:thin;
-    scrollbar-color:var(--rosa) var(--blush);
+    scrollbar-width:none;
+    -ms-overflow-style:none;
   }
-  .carrossel::-webkit-scrollbar{ height:6px; }
-  .carrossel::-webkit-scrollbar-track{ background:var(--blush); }
-  .carrossel::-webkit-scrollbar-thumb{ background:var(--rosa); border-radius:6px; }
+  .carrossel::-webkit-scrollbar{ display:none; }
+  .carrossel-wrap{
+    position:relative;
+  }
+  .carrossel-seta{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:20;
+    width:44px;height:44px;
+    border-radius:50%;
+    background:var(--marfim);
+    color:var(--vinho);
+    border:1.5px solid var(--rosa);
+    font-size:1.4rem;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 10px 24px -10px rgba(110,42,56,0.35);
+    transition:background .2s,color .2s;
+  }
+  .carrossel-seta:hover{ background:var(--rosa); color:var(--marfim); }
+  .carrossel-seta-esq{ left:-8px; }
+  .carrossel-seta-dir{ right:-8px; }
+  @media (max-width:640px){
+    .carrossel-seta{ display:none; }
+  }
 
   .cat-card{
     flex:0 0 240px;

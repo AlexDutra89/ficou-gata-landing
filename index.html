@@ -113,7 +113,9 @@
       </div>
     </div>
 
-    <div class="carrossel">
+    <div class="carrossel-wrap">
+      <button type="button" class="carrossel-seta carrossel-seta-esq" onclick="scrollVitrine(-1)" aria-label="Ver anteriores">‹</button>
+      <div class="carrossel" id="vitrineCarrossel">
       <div class="cat-card" id="camisasCard">
         <div class="cat-photo" id="camisasFoto" onclick="cycleCamisas(this)">
           <button type="button" class="cat-view-btn" onclick="event.stopPropagation(); abrirVisualizacao(this)">Visualizar</button>
@@ -162,6 +164,8 @@
         <p class="cat-produto" id="calcasProduto"></p>
         <button type="button" class="cat-add" onclick="addToCart('Calças')">+ Adicionar à sacola</button>
       </div>
+      </div>
+      <button type="button" class="carrossel-seta carrossel-seta-dir" onclick="scrollVitrine(1)" aria-label="Ver próximas">›</button>
     </div>
   </div>
 </section>
