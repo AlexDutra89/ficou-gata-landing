@@ -120,9 +120,11 @@
     display:flex;
     align-items:center;
     gap:12px;
+    cursor:pointer;
+    text-decoration:none;
   }
   .logo-group img{
-    width:46px;height:46px;
+    width:64px;height:64px;
     border-radius:50%;
     object-fit:cover;
     box-shadow:0 0 0 2px var(--marfim), 0 0 0 3px var(--rosa);

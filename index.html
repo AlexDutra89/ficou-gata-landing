@@ -32,10 +32,10 @@
 <!-- ================= HEADER ================= -->
 <header>
   <div class="container header-inner">
-    <div class="logo-group">
+    <a href="#top" class="logo-group" id="logoHome" aria-label="Voltar ao início">
       <img src="imagens/hero/hero.webp" alt="Logo Ficou Gata">
       <span>Ficou <em>Gata</em></span>
-    </div>
+    </a>
 
     <nav class="main-nav" id="mainNav">
       <a href="#camisas">Camisas</a>
@@ -388,6 +388,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="js/script.js"></script>
+<script>
+  document.getElementById('logoHome').addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 <div id="visualizadorOverlay" class="visualizador-overlay" hidden onclick="fecharVisualizacao()">
   <button type="button" class="visualizador-voltar" onclick="event.stopPropagation(); fecharVisualizacao()">Voltar</button>
