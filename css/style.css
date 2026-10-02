@@ -262,13 +262,12 @@
     opacity:1;
     transform:translateY(0);
   }
-  /* Quem ativou "reduzir movimento" vê o hero direto, sem a animação */
+  /* Quem ativou "reduzir movimento" vê só um fade suave, sem deslocamento nem desfoque */
   @media (prefers-reduced-motion: reduce){
     .blur-word, .fade-block{
       filter:none;
-      opacity:1;
       transform:none;
-      transition:none;
+      transition:opacity .6s ease;
     }
   }
   .hero-tag-float{
