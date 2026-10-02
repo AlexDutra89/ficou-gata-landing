@@ -655,6 +655,16 @@
     border-radius:50%;
     top:-260px;right:-160px;
   }
+  .cta-rings{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+  }
+  .cta-final .container{
+    position:relative;
+    z-index:1;
+  }
   .cta-final h2{
     color:var(--marfim);
     font-size:clamp(2rem,4vw,3rem);
