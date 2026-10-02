@@ -59,16 +59,31 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="container hero-grid">
+  <div class="container hero-grid hero-reveal" id="heroReveal">
     <div>
-      <p class="hero-eyebrow">Nova coleção toda semana</p>
-      <h1>Peça boa é peça<br><em>que combina com você</em></h1>
-      <p class="lead">Roupa com identidade, preço justo e aquele carinho de loja de bairro. Manda um oi no WhatsApp que a gente separa o look certo pra você.</p>
-      <div class="hero-ctas">
+      <p class="hero-eyebrow blur-reveal">
+        <span class="blur-word" style="transition-delay:0ms">Nova</span>
+        <span class="blur-word" style="transition-delay:60ms">coleção</span>
+        <span class="blur-word" style="transition-delay:120ms">toda</span>
+        <span class="blur-word" style="transition-delay:180ms">semana</span>
+      </p>
+      <h1 class="blur-reveal">
+        <span class="blur-word" style="transition-delay:280ms">Peça</span>
+        <span class="blur-word" style="transition-delay:340ms">boa</span>
+        <span class="blur-word" style="transition-delay:400ms">é</span>
+        <span class="blur-word" style="transition-delay:460ms">peça</span>
+        <br>
+        <em><span class="blur-word" style="transition-delay:520ms">que</span>
+        <span class="blur-word" style="transition-delay:580ms">combina</span>
+        <span class="blur-word" style="transition-delay:640ms">com</span>
+        <span class="blur-word" style="transition-delay:700ms">você</span></em>
+      </h1>
+      <p class="lead fade-block" style="transition-delay:800ms">Roupa com identidade, preço justo e aquele carinho de loja de bairro. Manda um oi no WhatsApp que a gente separa o look certo pra você.</p>
+      <div class="hero-ctas fade-block" style="transition-delay:900ms">
         <a href="#vitrine" class="btn btn-primary">Ver coleção</a>
       </div>
     </div>
-    <div class="hero-visual">
+    <div class="hero-visual fade-block" style="transition-delay:200ms">
       <div class="hero-photo-frame">
         <div class="hero-carrossel-foto" id="heroCarrossel" onclick="heroCarrosselClick()" role="button" tabindex="0" aria-label="Ver peça na vitrine" style="cursor:pointer;background-size:cover;background-position:center;"></div>
       </div>

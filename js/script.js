@@ -347,6 +347,26 @@ const CONTATO_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzFQgJto5Drzi
   };
 })();
 
+function initBlurTextReveal(selector){
+  var el = document.querySelector(selector);
+  if (!el) return;
+  if (!('IntersectionObserver' in window)) {
+    el.classList.add('in-view');
+    return;
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  observer.observe(el);
+}
+
+initBlurTextReveal('#heroReveal');
+
 function initMagicRings(mountEl, opts){
   opts = Object.assign({
     color: '#C98B93', colorTwo: '#FAF6F2', speed: 0.6, ringCount: 5,

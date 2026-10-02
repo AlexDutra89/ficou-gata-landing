@@ -239,6 +239,38 @@
     background-color:var(--blush);
     transition:opacity .3s ease;
   }
+  .blur-word{
+    display:inline-block;
+    filter:blur(10px);
+    opacity:0;
+    transform:translateY(-20px);
+    transition:filter .6s ease, opacity .6s ease, transform .6s ease;
+  }
+  .fade-block{
+    opacity:0;
+    filter:blur(6px);
+    transform:translateY(20px);
+    transition:filter .6s ease, opacity .6s ease, transform .6s ease;
+  }
+  .hero-reveal.in-view .blur-word{
+    filter:blur(0);
+    opacity:1;
+    transform:translateY(0);
+  }
+  .hero-reveal.in-view .fade-block{
+    filter:blur(0);
+    opacity:1;
+    transform:translateY(0);
+  }
+  /* Quem ativou "reduzir movimento" vê o hero direto, sem a animação */
+  @media (prefers-reduced-motion: reduce){
+    .blur-word, .fade-block{
+      filter:none;
+      opacity:1;
+      transform:none;
+      transition:none;
+    }
+  }
   .hero-tag-float{
     position:absolute;
     bottom:-18px;left:-18px;
