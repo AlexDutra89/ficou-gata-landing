@@ -618,6 +618,12 @@
     font-size:1.05rem;
     margin-bottom:22px;
   }
+  .dep-stars{
+    color:var(--rosa);
+    font-size:1rem;
+    letter-spacing:2px;
+    margin-bottom:10px;
+  }
   .dep-person{ display:flex; align-items:center; gap:12px; }
   .dep-avatar{
     width:42px;height:42px;
