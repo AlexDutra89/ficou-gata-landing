@@ -359,6 +359,9 @@ function initMagicRings(mountEl, opts){
 
   if (!window.THREE || !mountEl) return;
 
+  // Quem ativou "reduzir movimento" no sistema vê um quadro parado dos anéis
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   var renderer;
   try { renderer = new THREE.WebGLRenderer({ alpha: true }); }
   catch (e) { return; }
@@ -456,7 +459,10 @@ function initMagicRings(mountEl, opts){
     renderer.setSize(w, h);
     renderer.setPixelRatio(dpr);
     uniforms.uResolution.value.set(w * dpr, h * dpr);
+    // setSize limpa o canvas; no modo parado, redesenha o quadro
+    if (reduceMotion && hasRendered) renderer.render(scene, camera);
   }
+  var hasRendered = false;
   resize();
   window.addEventListener('resize', resize);
   var ro = new ResizeObserver(resize);
@@ -464,7 +470,7 @@ function initMagicRings(mountEl, opts){
 
   var mouse = [0, 0], smoothMouse = [0, 0], hoverAmount = 0, isHovered = false, burst = 0;
 
-  var frameId = 0, isVisible = false, isPageVisible = !document.hidden, elapsed = 0, lastT = 0;
+  var frameId = 0, isVisible = false, isPageVisible = !document.hidden, elapsed = reduceMotion ? 1.2 : 0, lastT = 0;
   function animate(t){
     frameId = requestAnimationFrame(animate);
     var dt = lastT === 0 ? 0 : Math.min(t - lastT, 100);
@@ -499,6 +505,8 @@ function initMagicRings(mountEl, opts){
     uniforms.uCoverageAlpha.value = opts.alphaMode === 'coverage' ? 1 : 0;
 
     renderer.render(scene, camera);
+    hasRendered = true;
+    if (reduceMotion) tryStop();
   }
 
   function tryStart(){ if (isVisible && isPageVisible && frameId === 0) { lastT = 0; frameId = requestAnimationFrame(animate); } }
