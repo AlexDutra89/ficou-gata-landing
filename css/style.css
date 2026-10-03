@@ -198,7 +198,7 @@
     font-size:0.8rem;
     letter-spacing:.18em;
     text-transform:uppercase;
-    color:var(--rosa);
+    color:var(--vinho-escuro);
     font-weight:500;
     margin-bottom:18px;
   }
@@ -207,7 +207,7 @@
     line-height:1.08;
     margin-bottom:22px;
   }
-  .hero h1 em{ color:var(--vinho); font-style:italic; }
+  .hero h1 em{ color:var(--rosa); font-style:italic; }
   .hero p.lead{
     font-size:1.08rem;
     color:#5a4548;
@@ -341,7 +341,7 @@
   .section-head p{ color:#5a4548; max-width:420px; }
   .section-head p.vitrine-tamanhos{
     font-weight:600;
-    color:var(--rosa);
+    color:var(--vinho-escuro);
     margin-top:6px;
   }
 
@@ -620,14 +620,6 @@
     padding:38px 30px;
     border-radius:4px;
     position:relative;
-  }
-  .dif-num{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:0.95rem;
-    color:var(--rosa);
-    margin-bottom:16px;
-    display:block;
   }
   .dif-card h3{ font-size:1.3rem; margin-bottom:12px; }
   .dif-card p{ color:#5a4548; font-size:0.96rem; }
