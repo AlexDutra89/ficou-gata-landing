@@ -6,15 +6,16 @@ Site publicado: https://ficou-gata-landing.vercel.app/
 
 ## Categorias de produto
 
-A loja trabalha só com roupas, sem acessórios:
+A loja trabalha só com roupas, sem acessórios. Categorias na vitrine hoje:
 
-- Vestidos
-- Blusas e Camisas
-- Calças
-- Saias
+- Camisas
+- Blusinhas
 - Conjuntos
+- T-shirts
+- Bodys
+- Calças
 
-Categorias exibidas hoje na vitrine do site: Camisas, Blusinhas, Conjuntos, T-shirts, Bodys e Calças.
+Vestidos e Saias entram na vitrine assim que as peças chegarem.
 
 ## Stack
 
